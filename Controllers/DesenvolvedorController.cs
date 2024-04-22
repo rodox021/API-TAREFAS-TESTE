@@ -12,7 +12,8 @@ using Microsoft.Extensions.Logging;
 
 namespace Api.Controller
 {
-    [Route("[controller]")]
+      [Route("api/v1/[controller]")]
+    [ApiController]
     public class DesenvolvedorController : ControllerBase
     {
         private readonly IDesenvolvedorRepository _Repository;
