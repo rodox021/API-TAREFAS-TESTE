@@ -11,19 +11,20 @@ namespace Api.Context
     {
         public MyTaskContext(DbContextOptions<MyTaskContext> options) : base(options)
         {
+            Database.EnsureCreated();
         }
 
         public DbSet<MyTask> Tasks { get; set; }
         public DbSet<Desenvolvedor> Desenvolvedores { get; set; }
 
-       /*   protected override void OnModelCreating(ModelBuilder modelBuilder)
+          protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Desenvolvedor>()
+            base.OnModelCreating(modelBuilder);
+            /* modelBuilder.Entity<Desenvolvedor>()
             .HasOne<MyTask>(d => d.Task)
             .WithOne(t => t.Desenvolvedor)
-            .HasForeignKey<MyTask>(t => t.DesenvolvedorId);
-  
-        }  */
+            .HasForeignKey<MyTask>(t => t.DesenvolvedorId); */
+        }  
     } 
     
 }
