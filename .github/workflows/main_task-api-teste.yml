@@ -1,7 +1,7 @@
 # Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 
-name: Build and deploy ASP.Net Core app to Azure Web App - Task-APi-teste
+name: Build and deploy ASP.Net Core app to Azure Web App - Task-api-teste
 
 on:
   push:
@@ -11,7 +11,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
 
     steps:
       - uses: actions/checkout@v4
@@ -35,7 +35,7 @@ jobs:
           path: ${{env.DOTNET_ROOT}}/myapp
 
   deploy:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     needs: build
     environment:
       name: 'Production'
@@ -52,15 +52,15 @@ jobs:
       - name: Login to Azure
         uses: azure/login@v1
         with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_C1F25AF059254C8A918F492F1E71093A }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_0EFF487DF3D24AA3BDC658A6B4367BD6 }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_F40E694D600E4844BDC53B5D7AEFCDFA }}
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_B51DF029F53E4B7AADF12BCC6E2082C1 }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_0CBEBAFDBD8F43F39FEB55643E6B4B0A }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_A19CD9E9E2F9445AA8B912E5FCB542E3 }}
 
       - name: Deploy to Azure Web App
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v2
         with:
-          app-name: 'Task-APi-teste'
+          app-name: 'Task-api-teste'
           slot-name: 'Production'
           package: .
           
