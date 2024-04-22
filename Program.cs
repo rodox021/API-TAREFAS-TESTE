@@ -7,6 +7,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddDbContext<MyTaskContext>(option => option.UseSqlite("data source=Mytask.db"));
 builder.Services.AddScoped<IMyTaskRepository, MyTaskRepository>();
+builder.Services.AddCors();
 
 
 builder.Services.AddControllers();
@@ -25,6 +26,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "MyTaks-API v1"));
 }
 
+app.UseCors(x => x.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
 app.UseHttpsRedirection();
 app.UseRouting();
 
