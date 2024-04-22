@@ -1,7 +1,7 @@
 # Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 
-name: Build and deploy ASP.Net Core app to Azure Web App - Task-api-teste
+name: Build and deploy ASP.Net Core app to Azure Web App - API-TAREFA-TESTE
 
 on:
   push:
@@ -52,15 +52,15 @@ jobs:
       - name: Login to Azure
         uses: azure/login@v1
         with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_B51DF029F53E4B7AADF12BCC6E2082C1 }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_0CBEBAFDBD8F43F39FEB55643E6B4B0A }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_A19CD9E9E2F9445AA8B912E5FCB542E3 }}
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_37C061EFBDB741228E95184A482F8C0D }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_236A563E0DB34149840633D15A32F9D1 }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_9BDB0F7330F0422CA2E255E330DB23DD }}
 
       - name: Deploy to Azure Web App
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v2
         with:
-          app-name: 'Task-api-teste'
+          app-name: 'API-TAREFA-TESTE'
           slot-name: 'Production'
           package: .
           
