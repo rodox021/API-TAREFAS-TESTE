@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\rodox\\OneDrive\\Projetos de App\\API .NET_EF\\Api\\API-TAREFAS-TESTE\\api.csproj": {}
+    "C:\\Users\\rodox\\OneDrive\\Projetos de App\\API .NET_EF\\Api\\API-TAREFAS-TESTE\\API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\rodox\\OneDrive\\Projetos de App\\API .NET_EF\\Api\\API-TAREFAS-TESTE\\api.csproj": {
+    "C:\\Users\\rodox\\OneDrive\\Projetos de App\\API .NET_EF\\Api\\API-TAREFAS-TESTE\\API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\rodox\\OneDrive\\Projetos de App\\API .NET_EF\\Api\\API-TAREFAS-TESTE\\api.csproj",
-        "projectName": "api",
-        "projectPath": "C:\\Users\\rodox\\OneDrive\\Projetos de App\\API .NET_EF\\Api\\API-TAREFAS-TESTE\\api.csproj",
+        "projectUniqueName": "C:\\Users\\rodox\\OneDrive\\Projetos de App\\API .NET_EF\\Api\\API-TAREFAS-TESTE\\API.csproj",
+        "projectName": "API",
+        "projectPath": "C:\\Users\\rodox\\OneDrive\\Projetos de App\\API .NET_EF\\Api\\API-TAREFAS-TESTE\\API.csproj",
         "packagesPath": "C:\\Users\\rodox\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\rodox\\OneDrive\\Projetos de App\\API .NET_EF\\Api\\API-TAREFAS-TESTE\\obj\\",
         "projectStyle": "PackageReference",
