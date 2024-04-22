@@ -27,9 +27,9 @@ namespace API.Repositories
             return await _context.Desenvolvedores.ToListAsync();
         }
 
-        public Task<Desenvolvedor> GetById(int id)
+        public async Task<Desenvolvedor> GetById(int id)
         {
-            throw new NotImplementedException();
+             return await _context.Desenvolvedores.FindAsync(id);
         }
 
         // METODO HTTP POST ---------------------------------------------------------------------------
@@ -41,17 +41,21 @@ namespace API.Repositories
         }
 
         // METODO HTTP DELETE ---------------------------------------------------------------------------
-        public Task Delete(int id)
+        public async Task Delete(int id)
         {
-            throw new NotImplementedException();
+             var devdelete = await _context.Desenvolvedores.FindAsync(id);
+            _context.Desenvolvedores.Remove(devdelete);
+            await _context.SaveChangesAsync();
         }
 
         
         // METODO HTTP PUT ---------------------------------------------------------------------------
 
-        public Task Update(Desenvolvedor task)
+        public async Task<Desenvolvedor> Update(Desenvolvedor dev)
         {
-            throw new NotImplementedException();
+           _context.Desenvolvedores.Update(dev);
+           await _context.SaveChangesAsync();
+            return dev;
         }
 
 

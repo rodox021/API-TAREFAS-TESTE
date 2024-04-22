@@ -35,6 +35,14 @@ namespace Api.Controller
             return await _Repository.GetAll();
         }
 
+
+        [HttpGet("{id}")]
+        public async Task<Desenvolvedor> GetDesenvolvedorById(int id)
+        {
+            return await _Repository.GetById(id);
+        }
+
+
          // ----------- HTTP POST ----------------------------------------
         [HttpPost]
         public async Task<ActionResult<Desenvolvedor>> Create([FromBody]Desenvolvedor dev)
@@ -44,7 +52,7 @@ namespace Api.Controller
 
                 if (dev.Name.Equals("")) 
                 {
-                    throw new MyTaskException("Selecione um desenvolvedor responsavel pela criação");
+                    throw new MyTaskException("Nome do desenvolvedor é obrigatório");
                 }
                 var newdev = await _Repository.Create(dev);
                 return Ok(newdev);
@@ -65,6 +73,35 @@ namespace Api.Controller
             }
 
 
+        }
+        // ----------- HTTP PUT ------------------------------------------
+
+    
+        [HttpPut]
+        public async Task<ActionResult<MyTask>> Update(int id, [FromBody] Desenvolvedor dev)
+        {
+            if (await GetDesenvolvedorById(id) == null )
+            {
+                return NotFound("Desenvolvedor não encontrado");
+            }
+            await _Repository.Update(dev);
+            return  Ok(dev);
+        }
+
+
+
+        // ----------- HTTP DELETE ----------------------------------------
+         [HttpDelete]
+        public async Task<ActionResult> Delete(int id)
+        {
+             var devDelete = await _Repository.GetById(id);
+            if (devDelete == null)
+            {
+                return NotFound();
+
+            }
+            await _Repository.Delete(devDelete.Id);
+            return NoContent();
         }
     }
 }

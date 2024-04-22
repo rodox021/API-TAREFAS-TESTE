@@ -11,6 +11,8 @@ namespace Api.Context
     {
         public MyTaskContext(DbContextOptions<MyTaskContext> options) : base(options)
         {
+            ChangeTracker.QueryTrackingBehavior = QueryTrackingBehavior.NoTracking;
+            ChangeTracker.AutoDetectChangesEnabled = false;
             Database.EnsureCreated();
         }
 

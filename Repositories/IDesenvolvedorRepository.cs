@@ -11,7 +11,7 @@ namespace API.Repositories
         Task<IEnumerable<Desenvolvedor>> GetAll();
         Task<Desenvolvedor> GetById(int id);
         Task<Desenvolvedor> Create(Desenvolvedor task);
-        Task Update(Desenvolvedor task);
+        Task<Desenvolvedor> Update(Desenvolvedor task);
         Task Delete(int id);
     }
 }
