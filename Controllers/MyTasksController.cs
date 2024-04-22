@@ -59,7 +59,7 @@ namespace Api.Controllers
             catch (System.Exception)
             {
                 
-                return BadRequest("Entrou no geral");
+                return BadRequest("Erro inesperado!");
             }
 
 

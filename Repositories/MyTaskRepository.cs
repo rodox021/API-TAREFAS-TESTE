@@ -19,22 +19,7 @@ namespace Api.Repositories
             _context = context;
         }
 
-        public async Task<MyTask> Create(MyTask task)
-        {
-           
-           _context.Tasks.Add(task);
-           await _context.SaveChangesAsync();
-           return task;
-        }
-
-        public async Task Delete(int id)
-        {
-            var taskDelete = await _context.Tasks.FindAsync(id);
-            _context.Tasks.Remove(taskDelete);
-            await _context.SaveChangesAsync();
-            
-        }
-
+    // MEODOS HTTP GET
         public async Task<IEnumerable<MyTask>> GetAll()
         {
             return await _context.Tasks.ToListAsync();
@@ -46,6 +31,26 @@ namespace Api.Repositories
             
         }
 
+        // METODO HTTP POST
+        public async Task<MyTask> Create(MyTask task)
+        {
+           
+           _context.Tasks.Add(task);
+           await _context.SaveChangesAsync();
+           return task;
+        }
+
+        // METODO HTTP DELETE
+        public async Task Delete(int id)
+        {
+            var taskDelete = await _context.Tasks.FindAsync(id);
+            _context.Tasks.Remove(taskDelete);
+            await _context.SaveChangesAsync();
+            
+        }
+
+
+        // METODO HTTP PUT
         public async Task Update(MyTask task)
         {
            _context.Entry(task).State = EntityState.Modified;
