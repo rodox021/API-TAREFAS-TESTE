@@ -1649,9 +1649,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\rodox\\OneDrive\\Projetos de App\\API .NET_EF\\Api\\API-TAREFAS-TESTE\\api.csproj",
-      "projectName": "api",
-      "projectPath": "C:\\Users\\rodox\\OneDrive\\Projetos de App\\API .NET_EF\\Api\\API-TAREFAS-TESTE\\api.csproj",
+      "projectUniqueName": "C:\\Users\\rodox\\OneDrive\\Projetos de App\\API .NET_EF\\Api\\API-TAREFAS-TESTE\\API-TAREFAS-TESTE.csproj",
+      "projectName": "API-TAREFAS-TESTE",
+      "projectPath": "C:\\Users\\rodox\\OneDrive\\Projetos de App\\API .NET_EF\\Api\\API-TAREFAS-TESTE\\API-TAREFAS-TESTE.csproj",
       "packagesPath": "C:\\Users\\rodox\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\rodox\\OneDrive\\Projetos de App\\API .NET_EF\\Api\\API-TAREFAS-TESTE\\obj\\",
       "projectStyle": "PackageReference",

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "5cHwZN8noP6SePgVCiJTi5VzgDJICMSOMci8XM9hfgd+JdEbBWjkpMVd1SgKAWHgiDbAL/WRF+y9mcR2noGaeg==",
+  "dgSpecHash": "nHqX2liudRy5goGLD7I+l/ZKgbKSsPr2XqYB0TVLhZSfRcNiqfMDt3fKWJI0jRVBi0oH4kb+qWGzp//zXM38Tg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\rodox\\OneDrive\\Projetos de App\\API .NET_EF\\Api\\API-TAREFAS-TESTE\\api.csproj",
+  "projectFilePath": "C:\\Users\\rodox\\OneDrive\\Projetos de App\\API .NET_EF\\Api\\API-TAREFAS-TESTE\\API-TAREFAS-TESTE.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\rodox\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\rodox\\.nuget\\packages\\microsoft.data.sqlite.core\\6.0.0\\microsoft.data.sqlite.core.6.0.0.nupkg.sha512",
